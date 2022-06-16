@@ -71,10 +71,6 @@
     <Reference Include="Microsoft.Azure.Management.KeyVault.dll">
       <HintPath>$(PkgMicrosoft_Azure_Management_KeyVault)\lib\net45\Microsoft.Azure.Management.KeyVault.dll</HintPath>
     </Reference>
-    <Reference Include="ScintillaNET">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(Pkgjacobslusser_ScintillaNET_3_6_3)\lib\net40\ScintillaNET.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -242,7 +238,6 @@
     <EmbeddedResource Include="SubscriptionsManagerDialog.resx">
       <DependentUpon>SubscriptionsManagerDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -316,6 +311,11 @@
     <None Include="Resources\wrench.png" />
     <None Include="Resources\table.png" />
     <None Include="Resources\powershell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="jacobslusser.ScintillaNET">
+      <Version>3.6.3</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="AfterCompile">
